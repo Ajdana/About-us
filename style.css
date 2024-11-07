@@ -1,0 +1,192 @@
+details {
+    padding: 15px 0;
+}
+
+summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+summary:hover {
+    color: #2251a5;
+}
+
+summary::after {
+    content: "▼";
+    font-size: 16px;
+    color: #999;
+    transition: transform 0.3s;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg);
+}
+
+details p {
+    margin: 10px 0 0;
+    color: #666;
+}
+
+.about h1 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.about {
+    padding: 100px;
+}
+
+.scroll-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.scroll-slider img {
+    width: 350px;
+    height: 300px;
+    padding: 20px;
+}
+
+.Our h1 {
+    text-align: center;
+    color: cornflowerblue;
+}
+
+.Graphs {
+    display: flex;
+    place-content: center;
+    flex-direction: row;
+    gap: 40px;
+    text-align: center;
+    align-items: center;
+    padding: 80px;
+}
+
+.Graphs img {
+    width: 100px;
+    height: 100px;
+}
+
+.Graphs div {
+    display: flex;
+    flex-direction: column;
+}
+
+.Graphs h2 {
+    color: cornflowerblue;
+}
+
+.Graphs h1 {
+    color: cornflowerblue;
+}
+
+.title {
+    text-align: left;
+}
+
+.line {
+    width: 10px;
+    height: 90px;
+    background-color: cornflowerblue;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    display: grid;
+}
+
+.header ul li a:hover {
+    text-decoration: underline 2px blue;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    grid-column-gap: 30px;
+}
+
+.header button {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid cornflowerblue;
+    padding: 10px 20px 10px 20px;
+    transition: all 500ms ease;
+}
+
+.header button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: black;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    padding: 10px;
+}
+
+.links a {
+    color: white;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 450px){
+    .navbar {
+        display: none;
+    }
+
+    .Graphs {
+        padding: 0;
+        gap: 0;
+    }
+
+    .Graphs img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .Graphs h3 {
+        font-size: 10px;
+    }
+
+    .Graphs h2 {
+        font-size: 15px;
+    }
+
+    .Graphs div {
+        padding-right: 10px;
+    }
+
+}
